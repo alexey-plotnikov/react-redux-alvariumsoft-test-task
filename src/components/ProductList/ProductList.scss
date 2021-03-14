@@ -1,0 +1,19 @@
+.products-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  //   padding: 32px 55px 32px 55px;
+  overflow: auto;
+  border-bottom: 2px solid #cccccc;
+  scrollbar-color: #555 #f5f5f5;
+  scrollbar-width: thin;
+
+  .product-items {
+    margin-bottom: 20px;
+
+    &:nth-child(odd) {
+      margin-right: auto;
+    }
+  }
+}

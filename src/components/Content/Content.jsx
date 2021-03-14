@@ -6,9 +6,11 @@ import "./Content.scss";
 
 const ContentComponent = (props) => {
   return (
-    <div>
-      <FiltrationContainer />
-      <ProductsContainer />
+    <div className="content-component">
+      <div className="filtred-products">
+        <FiltrationContainer />
+        <ProductsContainer />
+      </div>
     </div>
   );
 };

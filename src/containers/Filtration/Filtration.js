@@ -8,11 +8,7 @@ class FiltrationContainer extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <FiltrationPanel />
-      </div>
-    );
+    return <FiltrationPanel />;
   }
 }
 
