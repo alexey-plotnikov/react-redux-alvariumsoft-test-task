@@ -4,7 +4,7 @@ import { FILTRATION_PANEL_CONSTANTS, FILTRATION_PANEL_VALUES } from "common/cons
 import "./FiltrationPanel.scss";
 
 const FiltrationPanel = (props) => {
-  const {} = props;
+  const { handleVisibilityFilter, filter } = props;
 
   return (
     <div className="filtration-panel-component">
@@ -29,9 +29,9 @@ const FiltrationPanel = (props) => {
         <label className="radio-button">
           <input
             type="radio"
-            value={FILTRATION_PANEL_VALUES.LOW_TO_HIGH}
-            // checked={sortingOption === FiltrationPanelValues.LOW_TO_HIGH}
-            // onChange={(event) => handleSortingOption(event)}
+            value={FILTRATION_PANEL_VALUES.ASCENDING}
+            checked={filter === FILTRATION_PANEL_VALUES.ASCENDING}
+            onChange={handleVisibilityFilter}
           />
           <span className="checkmark"></span>
         </label>
@@ -42,8 +42,8 @@ const FiltrationPanel = (props) => {
           <input
             type="radio"
             value={FILTRATION_PANEL_VALUES.DESCENDING}
-            // checked={sortingOption === FiltrationPanelValues.LOW_TO_HIGH}
-            // onChange={(event) => handleSortingOption(event)}
+            checked={filter === FILTRATION_PANEL_VALUES.DESCENDING}
+            onChange={handleVisibilityFilter}
           />
           <span className="checkmark"></span>
         </label>
@@ -54,8 +54,8 @@ const FiltrationPanel = (props) => {
           <input
             type="radio"
             value={FILTRATION_PANEL_VALUES.ALPHABETICAL}
-            // checked={sortingOption === FiltrationPanelValues.LOW_TO_HIGH}
-            // onChange={(event) => handleSortingOption(event)}
+            checked={filter === FILTRATION_PANEL_VALUES.ALPHABETICAL}
+            onChange={handleVisibilityFilter}
           />
           <span className="checkmark"></span>
         </label>

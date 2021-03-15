@@ -1,7 +1,7 @@
 .filtration-panel-component {
   display: flex;
-  width: 100%;
   flex-direction: column;
+  min-width: 15%;
   padding: 40px 30px 50px 12px;
   border-right: 2px solid #939393;
   border-bottom: 2px solid #cccccc;
@@ -10,7 +10,7 @@
     font-family: "Jheronimus Regular";
     font-weight: bold;
     font-size: 25px;
-    color: hsl(0, 0%, 22%);
+    color: #373737;
     margin-bottom: 10px;
   }
 

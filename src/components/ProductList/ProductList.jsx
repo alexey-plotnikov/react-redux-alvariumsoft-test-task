@@ -6,7 +6,6 @@ import "./ProductList.scss";
 
 const ProductList = (props) => {
   const { products } = props;
-  console.log(products);
 
   return (
     <div className="products-component">
