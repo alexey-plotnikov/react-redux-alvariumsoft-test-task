@@ -1,7 +1,7 @@
 import { ACTIONS } from "common/action-types";
-import { VISIBILITY_FILTERS } from "common/constants";
+import { FILTRATION_PANEL_VALUES } from "common/constants";
 
-const visibilityFilter = (state = VISIBILITY_FILTERS.ALPHABETICAL, action) => {
+const visibilityFilter = (state = FILTRATION_PANEL_VALUES.ALPHABETICAL, action) => {
   switch (action.type) {
     case ACTIONS.SET_VISIBILITY_FILTER:
       return action.filter;

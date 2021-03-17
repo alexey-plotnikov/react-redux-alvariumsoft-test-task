@@ -5,14 +5,14 @@ import ProductItem from "components/ProductItem/ProductItem";
 import "./ProductList.scss";
 
 const ProductList = (props) => {
-  const { products } = props;
+  const { products, currency } = props;
 
   return (
     <div className="products-component">
       {products.map(({ id, name, price, image, description }) => (
         <div className="product-items" key={id}>
           <ProductItem
-            // currentCurrency={currentCurrency}
+            currency={currency}
             name={name}
             price={price}
             image={image}

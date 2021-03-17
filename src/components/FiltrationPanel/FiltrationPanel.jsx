@@ -4,7 +4,7 @@ import { FILTRATION_PANEL_CONSTANTS, FILTRATION_PANEL_VALUES } from "common/cons
 import "./FiltrationPanel.scss";
 
 const FiltrationPanel = (props) => {
-  const { handleVisibilityFilter, filter } = props;
+  const { handleCurrencyChange, handleVisibilityFilter, filter } = props;
 
   return (
     <div className="filtration-panel-component">
@@ -21,8 +21,18 @@ const FiltrationPanel = (props) => {
       </div>
       <p className="currency">{FILTRATION_PANEL_CONSTANTS.CURRENCY}</p>
       <div className="currency-buttons">
-        <div className={`usd-currency-button`}>{FILTRATION_PANEL_CONSTANTS.USD}</div>
-        <div className={`uah-currency-button`}>{FILTRATION_PANEL_CONSTANTS.UAH}</div>
+        <div
+          className={`usd-currency-button`}
+          onClick={() => handleCurrencyChange(FILTRATION_PANEL_VALUES.USD)}
+        >
+          {FILTRATION_PANEL_CONSTANTS.USD}
+        </div>
+        <div
+          className={`uah-currency-button`}
+          onClick={() => handleCurrencyChange(FILTRATION_PANEL_VALUES.UAH)}
+        >
+          {FILTRATION_PANEL_CONSTANTS.UAH}
+        </div>
       </div>
       <p className="sorting">{FILTRATION_PANEL_CONSTANTS.SORTING}</p>
       <div className="sorting-option">
